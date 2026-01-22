@@ -66,7 +66,7 @@ const RandomUser = () => {
 						>
 							Sửa
 						</Button>
-						<Button
+						<Button>
 							style={{ marginLeft: 10 }}
 							onClick={() => {
 								const dataLocal: any = JSON.parse(localStorage.getItem('data') as any);
