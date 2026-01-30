@@ -25,6 +25,12 @@
 		icon: 'HomeOutlined',
 	},
 	{
+		path: '/home',
+		name: 'Home',
+		component: './Home/home',
+		icon: 'HomeOutlined',
+	},
+	{
 		path: '/gioi-thieu',
 		name: 'About',
 		component: './TienIch/GioiThieu',
@@ -47,6 +53,13 @@
 		name: 'Quản lý sản phẩm',
 		icon: 'ShoppingOutlined',
 		component: './QuanLySanPham',
+	},
+
+	{
+		path: '/quan-ly-don-hang',
+		name: 'Quản lý đơn hàng',
+		icon: 'ShoppingCartOutlined',
+		component: './QuanLyDonHang/quanlydonhang',
 	},
 
 	// DANH MUC HE THONG
