@@ -30,7 +30,7 @@ const MucTieu = () => {
     localStorage.setItem('goals', JSON.stringify(goals));
   }, [goals]);
 
-  // ================= TÍNH TOÁN HOÀN THÀNH =================
+  
   const checkGoal = (goal: any) => {
     const total = sessions
       .filter(
@@ -43,7 +43,7 @@ const MucTieu = () => {
     return total >= goal.targetMinutes;
   };
 
-  // ================= SUBMIT =================
+
   const handleSubmit = (values: any) => {
     const newData = {
       ...values,
@@ -65,7 +65,7 @@ const MucTieu = () => {
     form.resetFields();
   };
 
-  // ================= EDIT =================
+
   const handleEdit = (record: any) => {
     setEditing(record);
     form.setFieldsValue({
@@ -75,7 +75,7 @@ const MucTieu = () => {
     setVisible(true);
   };
 
-  // ================= DELETE =================
+
   const handleDelete = (id: number) => {
     setGoals(goals.filter((g) => g.id !== id));
   };

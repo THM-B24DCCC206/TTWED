@@ -19,18 +19,17 @@ const TienDo = () => {
   const [editing, setEditing] = useState<any>(null);
   const [form] = Form.useForm();
 
-  // Load dữ liệu
+
   useEffect(() => {
     setSessions(JSON.parse(localStorage.getItem('sessions') || '[]'));
     setSubjects(JSON.parse(localStorage.getItem('subjects') || '[]'));
   }, []);
 
-  // Lưu khi thay đổi
   useEffect(() => {
     localStorage.setItem('sessions', JSON.stringify(sessions));
   }, [sessions]);
 
-  // Thêm / Sửa
+
   const handleSubmit = (values: any) => {
     const newData = {
       ...values,
@@ -55,7 +54,7 @@ const TienDo = () => {
     form.resetFields();
   };
 
-  // Sửa
+
   const handleEdit = (record: any) => {
     setEditing(record);
     form.setFieldsValue({
@@ -65,7 +64,7 @@ const TienDo = () => {
     setVisible(true);
   };
 
-  // Xóa
+ 
   const handleDelete = (id: number) => {
     setSessions(sessions.filter((s) => s.id !== id));
   };
@@ -120,7 +119,6 @@ const TienDo = () => {
   return (
     <>
       <Button type="primary" onClick={() => setVisible(true)}>
-        Thêm lịch học
       </Button>
 
       <Table
