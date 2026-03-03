@@ -61,6 +61,18 @@
 		icon: 'ShoppingCartOutlined',
 		component: './QuanLyDonHang/quanlydonhang',
 	},
+	{
+       path: '/game-doan-so',
+       name: 'Guess Game',
+       icon: 'TrophyOutlined',
+       component: './GameDoanSo',
+    },
+	{
+       path: '/hoctap',
+       name: 'Quản lý học tập',
+       icon: 'BookOutlined',
+       component: './QuanLyHocTap',
+    },
 
 	// DANH MUC HE THONG
 	// {
