@@ -73,7 +73,18 @@
        icon: 'BookOutlined',
        component: './QuanLyHocTap',
     },
-
+	{
+       path: '/game',
+       name: 'Oẳn Tù Tì',
+       icon: 'smile',
+       component: './GameOanTuTi'
+   },
+   {
+      path: '/ngan-hang-cau-hoi',
+      name: 'Ngân hàng câu hỏi',
+      icon: 'BookOutlined',
+      component: './NganHangCauHoi',
+   },
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
