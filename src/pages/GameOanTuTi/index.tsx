@@ -37,7 +37,7 @@ function Game() {
       result,
     };
 
-    setHistory([...history, newRound]);
+    setHistory([...history,newRound]);
   };
 
   const columns: ColumnsType<Round> = [

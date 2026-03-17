@@ -85,6 +85,44 @@
       icon: 'BookOutlined',
       component: './NganHangCauHoi',
    },
+   {
+  path: '/th03',
+  name: 'Quản lý lịch hẹn',
+  icon: 'AppstoreOutlined',
+  routes: [
+    {
+      path: '/th03/dashboard',
+      name: 'Dashboard',
+      icon: 'DashboardOutlined',
+      component: './TH03/dashboard',
+    },
+    {
+      path: '/th03/appointments',
+      name: 'Lịch hẹn',
+      icon: 'CalendarOutlined',
+      component: './TH03/appointments',
+    },
+    {
+      path: '/th03/employees',
+      name: 'Nhân viên',
+      icon: 'UserOutlined',
+      component: './TH03/employees',
+    },
+    {
+      path: '/th03/services',
+      name: 'Dịch vụ',
+      icon: 'AppstoreOutlined',
+      component: './TH03/services',
+    },
+	{
+  path: '/th03/reviews',
+  name: 'Đánh giá',
+  icon: 'StarOutlined',
+  component: './TH03/reviews',
+},
+
+  ],
+},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
