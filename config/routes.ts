@@ -191,6 +191,39 @@
     ],
   },
 
+  // ================= TH06 =================
+  {
+    path: '/th06',
+    name: 'Kế Hoạch Du Lịch',
+    icon: 'global',
+    routes: [
+      {
+        path: '/th06',
+        redirect: '/th06/trang-chu',
+      },
+      {
+        path: '/th06/trang-chu',
+        name: 'Trang Chủ',
+        component: './TH06/TrangChu',
+      },
+      {
+        path: '/th06/lich-trinh',
+        name: 'Lịch Trình',
+        component: './TH06/LichTrinh',
+      },
+      {
+        path: '/th06/ngan-sach',
+        name: 'Ngân Sách',
+        component: './TH06/NganSach',
+      },
+      {
+        path: '/th06/admin',
+        name: 'Quản Trị',
+        component: './TH06/Admin',
+      },
+    ],
+  },
+
   // ================= KHÁC =================
   {
     path: '/notification',
