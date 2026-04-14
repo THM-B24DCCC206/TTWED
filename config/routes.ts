@@ -223,6 +223,12 @@
       },
     ],
   },
+  {
+    path: '/quan-ly-khoa-hoc',
+    name: 'Quản lý khóa học', 
+    icon: 'ReadOutlined',
+    component: './KTGK/QuanLyKhoaHoc', 
+  },
 
   // ================= KHÁC =================
   {
