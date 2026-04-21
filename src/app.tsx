@@ -16,6 +16,7 @@ import NotFoundContent from './pages/exception/404';
 import type { IInitialState } from './services/base/typing';
 import './styles/global.less';
 import { currentRole } from './utils/ip';
+import { khoiTaoDuLieuBlog } from '@/pages/TH07/tien_ich/blog';
 
 /**  loading */
 export const initialStateConfig = {
@@ -27,6 +28,8 @@ export const initialStateConfig = {
  * // Tobe removed
  * */
 export async function getInitialState(): Promise<IInitialState> {
+	khoiTaoDuLieuBlog();
+
 	return {
 		permissionLoading: true,
 	};
@@ -84,7 +87,9 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 		onPageChange: () => {
 			if (initialState?.currentUser) {
 				const { location } = history;
-				const isUncheckPath = unCheckPermissionPaths.some((path) => window.location.pathname.includes(path));
+				const isUncheckPath = unCheckPermissionPaths.some((path) =>
+					window.location.pathname.includes(path),
+				);
 
 				if (location.pathname === '/') {
 					history.replace('/dashboard');
@@ -92,7 +97,9 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 					!isUncheckPath &&
 					currentRole &&
 					initialState?.authorizedPermissions?.length &&
-					!initialState?.authorizedPermissions?.find((item) => item.rsname === currentRole)
+					!initialState?.authorizedPermissions?.find(
+						(item) => item.rsname === currentRole,
+					)
 				)
 					history.replace('/403');
 			}
@@ -100,7 +107,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 
 		menuItemRender: (item: any, dom: any) => (
 			<a
-				className='not-underline'
+				className="not-underline"
 				key={item?.path}
 				href={item?.path}
 				onClick={(e) => {

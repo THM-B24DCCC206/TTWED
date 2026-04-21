@@ -225,9 +225,48 @@
   },
   {
     path: '/quan-ly-khoa-hoc',
-    name: 'Quản lý khóa học', 
+    name: 'Quản lý khóa học',
     icon: 'ReadOutlined',
-    component: './KTGK/QuanLyKhoaHoc', 
+    component: './KTGK/QuanLyKhoaHoc',
+  },
+
+  // ================= TH07 =================
+  {
+    path: '/th07',
+    name: 'Blog cá nhân',
+    icon: 'ReadOutlined',
+    routes: [
+      {
+        path: '/th07',
+        redirect: '/th07/trang-chu',
+      },
+      {
+        path: '/th07/trang-chu',
+        name: 'Trang chủ',
+        component: './TH07/trang/TrangChu',
+      },
+      {
+        path: '/th07/bai-viet/:slug',
+        name: 'Chi tiết bài viết',
+        component: './TH07/trang/ChiTietBaiViet',
+        hideInMenu: true,
+      },
+      {
+        path: '/th07/gioi-thieu',
+        name: 'Giới thiệu',
+        component: './TH07/trang/GioiThieu',
+      },
+      {
+        path: '/th07/quan-ly-bai-viet',
+        name: 'Quản lý bài viết',
+        component: './TH07/trang/QuanLyBaiViet',
+      },
+      {
+        path: '/th07/quan-ly-the',
+        name: 'Quản lý thẻ',
+        component: './TH07/trang/QuanLyThe',
+      },
+    ],
   },
 
   // ================= KHÁC =================
