@@ -268,7 +268,42 @@
       },
     ],
   },
-
+{
+    path: '/th08',
+    name: 'Ứng dụng sức khỏe',
+    icon: 'HeartOutlined',
+    routes: [
+      {
+        path: '/th08',
+        redirect: '/th08/trang-chu',
+      },
+      {
+        path: '/th08/trang-chu',
+        name: 'Trang chủ',
+        component: './TH08/TrangChu',
+      },
+      {
+        path: '/th08/nhat-ky-tap-luyen',
+        name: 'Nhật ký tập luyện',
+        component: './TH08/NhatKyTapLuyen',
+      },
+      {
+        path: '/th08/chi-so-suc-khoe',
+        name: 'Chỉ số sức khỏe',
+        component: './TH08/ChiSoSucKhoe',
+      },
+      {
+        path: '/th08/muc-tieu',
+        name: 'Mục tiêu',
+        component: './TH08/MucTieu',
+      },
+      {
+        path: '/th08/thu-vien-bai-tap',
+        name: 'Thư viện bài tập',
+        component: './TH08/ThuVienBaiTap',
+      },
+    ],
+  },
   // ================= KHÁC =================
   {
     path: '/notification',
