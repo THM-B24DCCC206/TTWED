@@ -6,12 +6,12 @@ import { FireOutlined, CalendarOutlined, TrophyOutlined, RiseOutlined } from '@a
 const { Title, Text } = Typography;
 
 const TrangChu: React.FC = () => {
-  // Dữ liệu Mock
+ 
   const workoutData = [
     { week: 'Tuần 1', sessions: 3 },
     { week: 'Tuần 2', sessions: 4 },
     { week: 'Tuần 3', sessions: 2 },
-    { week: 'Tuần 4', sessions: 6 }, // Tăng lên tí nhìn biểu đồ cho cháy
+    { week: 'Tuần 4', sessions: 6 }, 
   ];
 
   const weightData = [
@@ -22,29 +22,29 @@ const TrangChu: React.FC = () => {
     { date: '29/04', weight: 72.2 },
   ];
 
-  // Config biểu đồ cột (Thêm bo góc cột và đổi màu)
+ 
   const columnConfig: any = {
     data: workoutData,
     xField: 'week',
     yField: 'sessions',
     color: '#1890ff',
     columnStyle: {
-      radius: [4, 4, 0, 0], // Bo góc trên của cột
+      radius: [4, 4, 0, 0], 
     },
     label: { position: 'middle', style: { fill: '#FFFFFF', opacity: 0.8 } },
   };
 
-  // Config biểu đồ đường (Thêm smooth và area)
+  
   const lineConfig: any = {
     data: weightData,
     xField: 'date',
     yField: 'weight',
-    smooth: true, // Đường uốn lượn mượt mà
+    smooth: true, 
     color: '#52c41a',
     point: { size: 5, shape: 'circle', style: { fill: '#fff', stroke: '#52c41a', lineWidth: 2 } },
   };
 
-  // Style dùng chung cho Card để nhìn nổi bật hơn
+  
   const cardStyle = { borderRadius: 12, boxShadow: '0 4px 12px rgba(0,0,0,0.05)' };
   const iconWrapperStyle = { 
     padding: '12px', 

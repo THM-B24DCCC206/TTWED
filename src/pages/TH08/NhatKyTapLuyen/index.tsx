@@ -4,7 +4,7 @@ import ProTable, { ActionType, ProColumns } from '@ant-design/pro-table';
 import { ModalForm, ProFormDatePicker, ProFormSelect, ProFormText, ProFormDigit, ProFormTextArea } from '@ant-design/pro-form';
 import { PlusOutlined } from '@ant-design/icons';
 
-// Định nghĩa Type dữ liệu
+
 type WorkoutRecord = {
   id: number;
   date: string;
@@ -59,7 +59,7 @@ const NhatKyTapLuyen: React.FC = () => {
       title: 'Ghi chú',
       dataIndex: 'notes',
       hideInSearch: true,
-      ellipsis: true, // Cắt chữ nếu quá dài
+      ellipsis: true, 
     },
     {
       title: 'Trạng thái',

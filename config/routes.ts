@@ -304,6 +304,35 @@
       },
     ],
   },
+
+  {
+    path: '/th09',
+    name: 'Quản lý công việc',
+    icon: 'ProjectOutlined',
+    routes: [
+      {
+        path: '/th09',
+        redirect: '/th09/dashboard',
+      },
+      {
+        path: '/th09/dashboard',
+        name: 'Dashboard',
+        component: './TH09/Dashboard',
+      },
+      {
+        path: '/th09/kanban-board',
+        name: 'Kanban Board',
+        component: './TH09/Kanban',
+      },
+      {
+        path: '/th09/danh-sach-task',
+        name: 'Danh sách task',
+        component: './TH09/TaskList',
+      },
+    ],
+  },
+
+
   // ================= KHÁC =================
   {
     path: '/notification',

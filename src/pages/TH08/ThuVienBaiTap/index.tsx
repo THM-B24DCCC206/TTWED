@@ -5,7 +5,6 @@ import { SearchOutlined, EyeOutlined } from '@ant-design/icons';
 const { Search } = Input;
 const { Option } = Select;
 
-// Định nghĩa Type
 type Exercise = {
   id: number;
   name: string;
@@ -21,7 +20,7 @@ const ThuVienBaiTap: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentEx, setCurrentEx] = useState<Exercise | null>(null);
 
-  // Dữ liệu Mock
+ 
   const exercises: Exercise[] = [
     { id: 1, name: 'Chống đẩy (Push Up)', muscleGroup: 'Chest', difficulty: 'Medium', description: 'Bài tập cơ bản phát triển ngực, vai và tay sau. Đặt hai tay rộng bằng vai, hạ thấp người cho đến khi ngực gần chạm sàn rồi đẩy lên.', caloriesPerHour: 300 },
     { id: 2, name: 'Plank', muscleGroup: 'Core', difficulty: 'Easy', description: 'Bài tập tĩnh giúp săn chắc cơ bụng. Tựa người trên hai cẳng tay và mũi chân, giữ cơ thể thành một đường thẳng.', caloriesPerHour: 200 },
@@ -30,7 +29,7 @@ const ThuVienBaiTap: React.FC = () => {
     { id: 5, name: 'Chạy bộ (Treadmill)', muscleGroup: 'Full Body', difficulty: 'Easy', description: 'Bài tập Cardio tăng cường sức bền và hệ tim mạch.', caloriesPerHour: 600 },
   ];
 
-  // Logic lọc
+ 
   const filteredExercises = exercises.filter((ex) => {
     const matchName = ex.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchMuscle = muscleFilter === 'All' || ex.muscleGroup === muscleFilter;

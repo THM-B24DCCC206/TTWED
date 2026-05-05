@@ -30,7 +30,7 @@ const MucTieu: React.FC = () => {
     return g.status === filterStatus;
   });
 
-  // Dùng tag dạng border (ghost) thay vì màu nền đặc để nhìn thanh thoát hơn
+  
   const getStatusTag = (status: string) => {
     switch (status) {
       case 'In Progress': return <Tag color="blue">Đang thực hiện</Tag>;
@@ -132,7 +132,6 @@ const MucTieu: React.FC = () => {
                     showInfo={false}
                     status={goal.status === 'Achieved' ? 'success' : goal.status === 'Cancelled' ? 'exception' : 'active'} 
                     strokeColor={goal.status === 'In Progress' ? '#262626' : undefined} 
-                    // Dùng màu xám đậm cho thanh tiến độ đang chạy để tạo sự tối giản
                   />
                 </div>
               </Card>

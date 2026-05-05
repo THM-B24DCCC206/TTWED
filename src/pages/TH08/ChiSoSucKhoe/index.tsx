@@ -4,7 +4,7 @@ import ProTable, { ActionType, ProColumns } from '@ant-design/pro-table';
 import { ModalForm, ProFormDatePicker, ProFormDigit } from '@ant-design/pro-form';
 import { PlusOutlined } from '@ant-design/icons';
 
-// 1. Định nghĩa Type cho dữ liệu
+
 export type HealthMetricRecord = {
   id: number;
   date: string;
@@ -14,7 +14,6 @@ export type HealthMetricRecord = {
   sleepHours: number;
 };
 
-// 2. Hàm phụ trợ tính và phân loại BMI
 const getBMIData = (weight?: number, heightCm?: number) => {
   if (!weight || !heightCm) return { value: '-', color: 'default', text: 'Chưa đủ dữ liệu' };
   
@@ -31,7 +30,6 @@ const getBMIData = (weight?: number, heightCm?: number) => {
 const ChiSoSucKhoe: React.FC = () => {
   const actionRef = useRef<ActionType>();
 
-  // 3. Khai báo các cột cho bảng
   const columns: ProColumns<HealthMetricRecord>[] = [
     {
       title: 'Ngày ghi nhận',
@@ -55,7 +53,7 @@ const ChiSoSucKhoe: React.FC = () => {
       title: 'Chỉ số BMI',
       key: 'bmi',
       hideInSearch: true,
-      hideInForm: true, // Ẩn hoàn toàn trong Form thêm/sửa vì nó tự tính
+      hideInForm: true, 
       render: (_, record) => {
         const bmiData = getBMIData(record.weight, record.height);
         return (
@@ -100,7 +98,6 @@ const ChiSoSucKhoe: React.FC = () => {
       actionRef={actionRef}
       cardBordered
       request={async () => {
-        // Trả về dữ liệu mock giả lập API
         return {
           data: [
             { id: 1, date: '2026-04-28', weight: 65, height: 170, heartRate: 72, sleepHours: 7.5 },
@@ -127,7 +124,6 @@ const ChiSoSucKhoe: React.FC = () => {
           onFinish={async (values) => {
             console.log('Dữ liệu nhập vào:', values);
             message.success('Thêm chỉ số thành công!');
-            // Sau này gọi API xong thì gọi actionRef.current?.reload() để load lại bảng
             return true;
           }}
         >
